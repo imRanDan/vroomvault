@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'
-import { useState } from "react";
 import Image from "next/image";
 
 import { SearchManufacturer } from ".";
@@ -32,8 +31,9 @@ const SearchBar = () => {
     if(manufacturer === '' && model === '') {
       return alert('Please fill in the search bar!')
     }
-    
 
+    updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase()
+    ) 
   }
 
   const updateSearchParams = (model: string,

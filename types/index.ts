@@ -29,3 +29,11 @@ export interface CarProps {
   transmission: string;
   year: number;
 }
+
+export interface FilterProps {
+  manufacturer: string.manufacturer || '',
+  year: number.year || 2022,
+  fuel: string.fuel || '',
+  limit: number.limit || 10,
+  model: string.model || '',
+}
