@@ -1,17 +1,42 @@
-import Image from 'next/image'
+"use client"
+
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore} from '@/components'
 import { fetchCars } from '@/utils';
 import { fuels, yearsOfProduction } from '@/constants'
+import { useState, useEffect } from 'react';
 
 
-export default async function Home({ searchParams }) {
-  const allCars = await fetchCars({
-    manufacturer: searchParams.manufacturer || '',
-    year: searchParams.year || 2022,
-    fuel: searchParams.fuel || '',
-    limit: searchParams.limit || 10,
-    model: searchParams.model || '',
-  });
+export default function Home() {
+  const [allCars, setAllCars] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  // Search states
+  const [manufacturer, setManufacturer] = useState("");
+  const [model, setModel] = useState("");
+
+  // filter states
+  const [fuel, setFuel] = useState("");
+  const [year, setYear] = useState(202)
+
+  // pagination states
+  const [limit, setLimit] = useState(10);
+
+  const getCars = async () => {
+    const result = await fetchCars({
+      manufacturer: manufacturer || '',
+      year: year || 2022,
+      fuel: fuel || '',
+      limit: limit || 10,
+      model: model || '',
+    });
+
+    setAllCars(result);
+  }
+
+  useEffect(() => {
+    getCars();
+  }, [fuel, year, limit, manufacturer, model])
+
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars;
 
