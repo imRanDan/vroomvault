@@ -20,7 +20,7 @@ string }) => (
 )
 
 
-const SearchBar = ( setManufacturer, setModel) => {
+const SearchBar = ({ setManufacturer, setModel } ) => {
   const [searchManufacturer, setSearchManufacturer] = useState('');
   const [searchModel, setSearchModel] = useState('');
   const router = useRouter();
@@ -57,7 +57,7 @@ const SearchBar = ( setManufacturer, setModel) => {
           type="text"
           name="model"
           value={searchModel}
-          onChange={(e) => setModel(e.target.value)}
+          onChange={(e) => setSearchModel(e.target.value)}
           placeholder="Tiguan"
           className="searchbar__input"
         />
