@@ -6,7 +6,6 @@ Link to project: https://car-showcase-93id.vercel.app/
 How It's Made:
 Tech used: TypeScript - React - NextJS - HeadlessUI - TailWindCSS
 
-A car
 
 Optimizations
 I would have liked to expand on it a bit more but I think for the tech I wanted to work with and for the functionalities and components I wanted to display, this is a good starting point.
