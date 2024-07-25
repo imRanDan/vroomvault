@@ -50,7 +50,7 @@ const CarDetails = ({ isOpen, closeModal, car}:
               <button
                 type="button"
                 className="absolute top-2 right-2 z-10
-                w-fit p-2 bg-primary-blue-100 rounded-full"
+                w-fit p-2 bg-white hover:bg-red-300 rounded-full"
                 onClick={closeModal}
               >
                 <Image 
@@ -63,20 +63,20 @@ const CarDetails = ({ isOpen, closeModal, car}:
               </button>
 
               <div className="flex-1 flex flex-col gap-3">
-                <div className="relative w-full h-40 bg-pattern bg-cover
+                <div className="relative w-full h-40 bg-black-100 bg-cover
                 bg-center rounded-lg">
                   <Image src={generateCarImageUrl(car)} alt="car model" 
                   fill priority className="object-contain" />
                 </div>
 
                 <div className="flex gap-3">
-                  <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                  <div className="flex-1 relative w-full h-24 bg-primary-red-100 rounded-lg">
                     <Image src={generateCarImageUrl(car, '29')} alt="car model" fill priority className="object-contain" />
                   </div>
-                  <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                  <div className="flex-1 relative w-full h-24 bg-primary-red-100 rounded-lg">
                     <Image src={generateCarImageUrl(car, '33')} alt="car model" fill priority className="object-contain" />
                   </div>
-                  <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                  <div className="flex-1 relative w-full h-24 bg-primary-red-100 rounded-lg">
                     <Image src={generateCarImageUrl(car, '13')} alt="car model" fill priority className="object-contain" />
                   </div>
                 </div>
