@@ -1,19 +1,38 @@
-# car-showcase
-A TypeScript / Next.JS / React-based app that fetches a car API and displays different car models with a functioning search bar and filter components.
+# VroomVault
 
-**Link to project:** https://car-showcase-93id.vercel.app/
+A TypeScript / Next.js / React-based app that fetches data from a car API to display various car models with a fully functional search bar and filter components.
 
-## How It's Made:
-**Tech used:** TypeScript - React - NextJS - HeadlessUI - TailWindCSS
+[Live Project Link](https://car-showcase-93id.vercel.app/)
 
+## How It's Made
+
+**Tech Stack**:  
+- **Frontend**: TypeScript, React, Next.js, Tailwind CSS
+- **UI Components**: Headless UI
+- **API**: Car data fetched from RapidAPI
 
 ## Optimizations
-I would have liked to expand on it a bit more but I think for the tech I wanted to work with and for the functionalities and components I wanted to display, this is a good starting point.
 
-## Lessons Learned:
-I learned a lot about using TypeScript to work with creating the components and functionalities of the app. Learned more about components, constants, types, utils, and hooks. Why it is important to organize them (even if it is a lot of work at first, if one wants to scale and expand the application, TS and using this organization will help do so and will save time down the line). I also built this to show from the serverside and had to convert to client-side, as when I was building with next13, there was a glitch where if one were to click the search bar or filters, it would scroll back to the top. Now that Next14 is out (I am not sure if this is fixed) I should probably check to see if it is fixed (this note was mode Nov 4th, 2023)
+This project serves as a strong starting point for displaying car models with search and filter features. Future optimizations could include expanding the app's functionality, adding more robust filtering options, or exploring ways to improve performance.
 
+## Lessons Learned
 
-## how to use
+Working on this app provided valuable experience in the following areas:
 
-By clicking on the live link, you will be taking to the landing page. As it is frontend only, and focused more on the search / filter results and pulling information from a database from RapidAPI, I left the links to not link anywhere. Scroll down to the car catalogue and you will be able to enter in a car company, a model, and filter it by year or whether it runs on gas or electricity.
+- **TypeScript**: Building components with TypeScript improved code structure and type safety, which will be especially useful for scaling and maintaining the app.
+- **Component Organization**: Organized components, constants, types, utils, and hooks. This structure, though initially time-intensive, simplifies scaling and maintenance in the long run.
+- **Next.js & Server-Side Rendering (SSR)**: Originally built with server-side rendering, but switched to client-side due to an issue in Next.js 13 where interacting with the search or filter components caused unwanted page scrolling. As of Nov 4, 2023, I intend to revisit this issue with the release of Next.js 14 to see if it has been resolved.
+
+## How to Use
+
+1. **Visit the Live Link**: Click the [project link](https://car-showcase-93id.vercel.app/) to access the app's landing page.
+2. **Explore the Car Catalog**: Scroll down to view the car catalog, where you can:
+   - **Search** by car make and model.
+   - **Filter** results by year, fuel type (gas or electric), etc.
+3. **Note**: This project focuses on frontend functionality and pulling data from RapidAPI. As such, external links are currently disabled and serve as placeholders.
+
+---
+## License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software as long as the original license is included in any substantial portions of the code. See the [LICENSE](./LICENSE) file for more details.
+
